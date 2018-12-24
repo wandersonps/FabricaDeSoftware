@@ -1,0 +1,56 @@
+##### GIT #####
+
+Clonar Repositório
+
+git clone https://github.com/flavioarruda4/prj_summer.git
+
+Commit e Push
+
+git status (pra verificar se as alterações foram realmente feitas)
+git add . (adicionar a staging area os arquivos)
+git commit -m "mensagem" (mensagem é a alteração feita)
+git push origin master (enviar para o repositorio remoto)
+
+
+Pull
+*sempre fazer antes de começar a fazer novas alterações, evita merge desnecessário
+git pull origin master (pra pegar as informações do repositório)
+
+*caso já tenha feito alterações (add e commit) e o ramo remoto estiver a frente do seu
+git pull origin master --rebase (ele irá mostrar a linha do erro, ai é só ir no arquivo e editar conforme)
+*logo em seguida: git rebase --continue (para encerrar o rebase e jogar o seu commit á frente)
+
+Reset
+
+git reset --hard "numero_do_commit" (resetar o commit)
+git reset --hard (descartar as alterações e voltar pro commit anterior)
+git commit "mensagem" --amend (caso tenha esquecido de algo no último commit e queira só altera-lo)
+
+Para maiores dúvidas seguir a documentação:https://git-scm.com/doc
+
+# Projeto php e css 
+
+
+* Criar as classes referentes na pasta models (seguir exemplo classe usuario.php)
+* Criar as telas (front-end) na pasta views (seguir os exemplos que se encontram na pasta)
+* A parte que se refere ao controle das requisições (salvar, excluir, atualizar-update) devem ir na pasta controllers...seguir os exemplos que estão na mesma)
+* As requisições estão sendo feitas via Ajax, deixando o sistema mais "clean" e robusto (ajax é uma api do jquery que faz requisições assícronas, 
+fazendo com que a tela não precise ser atualizada). Então todas as requisiões vão ser "pegas" por uma função ajax, que no caso, estão no arquivo ajax-render.js 
+na pasta js, é só seguir os exemplos e mudando as variáveis...pois, são muito parecidos.
+
+** Se atentar ao Bootstrap, estamos usando a versão 3.7 e isso influência em algumas classes, se baseie na documentação: http://getbootstrap.com/css/ , 
+http://getbootstrap.com/components/ ,http://getbootstrap.com/javascript/ ou siga os exemplos das outras paginas.
+
+** Usar a validação do bootstrap (vide cadastro-usuario.php), pois, ela acontece na própria tela sem necessidade de atualização ou renderização.
+
+** Caso precise de algum scrip pra esconder algo e mostrar, tirar classe ou inserir e afins verificar a documentação do jquery: http://api.jquery.com/ 
+ou seguir os exemplos do w3schools: http://www.w3schools.com/jquery/
+
+*** Lembrando que estamos usando MVC e phpOO, por isso toda essa modularização é necessária, quanto mais modularizado o nosso sistema mais fácil ele fica
+de dar manutenção e de versionar, exatamente porque se estivermos mexendo na mesma página na hora de versionar teríamos muitos conflitos.
+
+
+
+
+
+
